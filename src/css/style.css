@@ -71,21 +71,31 @@ body::before, body::after{
 	padding: 1em 0;
 }
 
-.title, .tagline{
-	 font-family: 'Special Elite', cursive;
-	 margin: 0;
-	 line-height: 1;
-}
-
 .title{
+	 /* font-family: 'Special Elite', cursive; */
+	font-family: 'Unkempt', cursive;
 	font-size: 3.8rem;
 	font-size: calc(3.8rem + .8vw);
 	font-weight: normal;
+	margin: 0;
+	line-height: 1;
 }
 
 .tagline{
+	font-family: 'Unkempt', cursive;
+	/* font-family: 'Special Elite', cursive; */ 
 	font-size: 1.2rem;
 	font-size: calc(1.2rem + .8vw);
+}
+
+.unkempt{
+	font-family: 'Unkempt', cursive;
+	color:rebeccapurple;
+	font-weight: bold;
+}
+
+a{
+	color:rebeccapurple;
 }
 
 /* interesting effect
@@ -97,7 +107,7 @@ body::before, body::after{
 
 .hgroup{
 	padding-right: 2em;
-	margin: 0 auto .5em 0;
+	margin: 0 auto 0 0;
 }
 
 .project{
