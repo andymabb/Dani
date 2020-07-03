@@ -34,13 +34,13 @@
 	
 	<ul class="mainnav nav">
 		<li><a href="./">Home</a></li>
-		<li><a href="projects.html">Creative Commissions</a></li>
+		<li><a href="projects.html">Portfolio</a></li>
 		<li class="active"><a href="about.html">About Us</a></li>
 	</ul>
 </header>
 
 <main class="main">
-	<h2>About Us</h2>
+	<h2 class="page-title">About Us</h2>
 	<div class="with-side-bar">
 		<div class="content">
 			<p>Dani Lee Arts was established by Dani Lee in response to a need for community art in south-West Wales.</p>
@@ -74,9 +74,18 @@
 				<li>Debitis harum architecto, rem.</li>
 				<li>Quisquam iusto, minus qui.</li>
 				<li>Placeat necessitatibus, tempora architecto?</li>
-				<li>Optio accusantium, ea eos.</li>
-				<li>Cum eius tempore nisi.</li>
 			</ul>
+			<a href="#example" class="toggle" role="button">show more&hellip;</a>
+			<ul class="past-work toggle-content" id="example">
+				<li>Lorem ipsum dolor sit.</li>
+				<li>Debitis harum architecto, rem.</li>
+				<li>Quisquam iusto, minus qui.</li>
+				<li>Placeat necessitatibus, tempora architecto?</li>
+				<li>Lorem ipsum dolor.</li>
+				<li>Quia commodi, porro!</li>
+				<li>Ipsum, voluptate tempore.</li>
+			</ul>
+			
 			<h3 class="bb">Testimonials</h3>
 			<ul class="testimonials">
 				<li>
@@ -104,7 +113,7 @@
 </main>
 
 <footer class="footer">
-	<div class="copy">&copy;2020 Dani Lee arts, Dani Lee arts, Wernlas, Cwmdu, Llandeilo, Carmarthenshire, SA19 7EE.</div>
+	<div class="copy">&copy;2020 Dani Lee arts, Wernlas, Cwmdu, Llandeilo, Carmarthenshire, SA19 7EE.</div>
 	<div class="footer-links">
 	<div>
 		<a href="tel:07971286442">07971 286442</a>
@@ -115,5 +124,45 @@
 	</div>
 </footer>
 
+<script>
+	var show = function (ele) {
+	ele.style.display = 'block';
+};
+
+var hide = function (ele) {
+	ele.style.display = 'none';
+};
+
+var toggle = function (ele) {
+
+	// If the eleent is visible, hide it
+	if (window.getComputedStyle(ele).display === 'block') {
+		hide(ele);
+		return;
+	}
+
+	// Otherwise, show it
+	show(ele);
+
+};
+
+// Listen for click events
+document.addEventListener('click', function (event) {
+
+	// Make sure clicked eleent is our toggle
+	if (!event.target.classList.contains('toggle')) return;
+
+	// Prevent default link behavior
+	event.preventDefault();
+
+	// Get the content
+	var content = document.querySelector(event.target.hash);
+	if (!content) return;
+
+	// Toggle the content
+	toggle(content);
+
+}, false);
+</script>
 </body>
 </html>

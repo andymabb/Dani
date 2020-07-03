@@ -2,6 +2,7 @@
 
 :root{
 	--highlight: #ffa500;
+	--highlight2: #94266f;
 }
 
 html {overflow-y: scroll;}
@@ -107,11 +108,12 @@ body::before{
 	font-size: 1.1em;
 	display: inline-block;
 	padding: .4em 1em;
+	white-space: nowrap;
 }
 
 .title{
-	font-family: 'Special Elite', cursive; 
-	/* font-family: 'Unkempt', cursive; */
+	/*font-family: 'Special Elite', cursive;*/ 
+	font-family: 'Unkempt', cursive; 
 	font-size: 3.8rem;
 	font-size: calc(3.8rem + .8vw);
 	font-weight: normal;
@@ -120,8 +122,8 @@ body::before{
 }
 
 .tagline{
-	font-family: 'Unkempt', cursive;
-	/* font-family: 'Special Elite', cursive; */ 
+	/*font-family: 'Unkempt', cursive;*/
+	 font-family: 'Special Elite', cursive;  
 	font-size: 1.2rem;
 	font-size: calc(1.2rem + .8vw);
 	margin-bottom: 0;
@@ -148,10 +150,11 @@ body::before{
 
 
 .mainnav{
-	/* margin-left: auto; */
+	margin-left: auto; 
 	display:flex;
 	align-items: flex-end;
 	margin-right: -1em;
+
 }
 
 .mainnav a{
@@ -160,17 +163,20 @@ body::before{
 	font-size: calc(1.1rem + .2vw);
 	display: inline-block;
 	padding: .5em 1em 0;
-}
-.mainnav a:hover{
-	color:orange;
 	text-decoration: none;
+}
+
+.mainnav a:hover{
+	color:var(--highlight);
+	text-decoration: underline;
+	
 }
 .mainnav :nth-child(1){
 	padding-left: 0;
 }
 
 .mainnav .active a{
-	color:#fff;
+	color:var(--highlight);
 	text-decoration: none;
 	cursor: default;
 }
@@ -286,7 +292,11 @@ img.right{
 
 /*=====TYPE=====*/
 .lede{
-	font-size: 115%;
+	font-size: 130%;
+}
+
+.page-title{
+	color: var(--highlight2);
 }
 
 
@@ -320,11 +330,21 @@ blockquote cite{
 
 
 .past-work{
-	padding-left: 1em;
+	padding-left: 1em;margin-bottom: 0;
 }
 
-.past-work ::marker{
-	color:var(--highlight);
+.toggle{
+	display: block;
+	margin-bottom: 1em;
+	margin-top: .5em;
+	color:#000!important;
+	font-size: 90%;
+}
+
+.toggle-content{
+	display: none;
+	margin-bottom: 1em;
+	margin-top: -.5em;
 }
 
 .testimonials{
@@ -344,6 +364,7 @@ blockquote cite{
 }
 
 .dla{
-	font-family: 'Special Elite', cursive;
+	/*font-family: 'Special Elite', cursive;*/
+	font-family: 'Unkempt', cursive; 
 	font-weight: bold;
 }
