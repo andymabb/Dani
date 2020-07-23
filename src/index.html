@@ -11,8 +11,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
 <link rel="manifest" href="img/favicons/site.webmanifest">
-<!-- <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Unkempt|Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
 <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -35,7 +36,7 @@
 	
 	<ul class="mainnav nav">
 		<li class="active"><a href="./">Home</a></li>
-		<li><a href="projects.html">Portfolio</a></li>
+		<li><a href="portfolio.html">Portfolio</a></li>
 		<li><a href="about.html">About Us</a></li>
 	</ul>
 </header>
@@ -47,11 +48,47 @@
     <p>Our projects are highly participatory. People of all ages, abilities and backgrounds are the co-creators. We inspire and enable people to make a creative contribution to their community and a      positive change within themselves.</p>
     <p><span class="dla">Dani Lee arts</span> works collaboratively with communities to create stunning murals of mosaic or cob, earth ovens and sculpture.</p>
     
-	<figure class="inset">
-		<img src="img/mosaic.jpg" alt="">
-		<figcaption>Work with mosaics</figcaption>
-	</figure>
 	<p>We work in the heart of communities, streets, green spaces, schools, hospitals and other local spaces and have an excellent track record of work in London and Wales spanning 24 years.</p>
+	
+	<h3><strong>Pictures to use on this page</strong></h3>
+	<ul class="gallery square" data-pswp>
+        <li>
+    		<a href="img/home/hp1.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp1.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp2.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp2.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp3.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp3.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp4.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp4.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp5.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp5.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp6.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp6.jpg" alt="">
+    		</a>
+		</li>
+		<li>
+    		<a href="img/home/hp7.jpg" data-caption="TEST CAPTION">
+        		<img src="img/home/thumbs/hp7.jpg" alt="">
+    		</a>
+		</li>
+	</ul>
+
 	<h3>Get in touch</h3>
 	<p>Call to action here!</p>
 
@@ -70,5 +107,15 @@
 	</div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" charset="utf-8"></script>
+
+<script src="js/scripts.min.js"></script>	
+	<script>
+		photoswipeSimplify.init({
+            history: false,
+            focus: false,
+        });
+	</script>
 </body>
 </html>
