@@ -1,0 +1,22 @@
+title. max about 50 characters
+desc. max about 120 characters
+
+Home
+<title>Dani Lee arts - Community Arts Projects</title>
+<meta name="description" content="We create participatory art projects with people of all ages and abilities.  We create murals, cob, earth ovens, ancient dwellings and more!">
+
+Portfolio
+<title>Dani Lee arts - community projects</title>
+<meta name="description" content="Community arts projecs in Llandeilo, Ammanford and London. Beautiful cob work and mosaics">
+
+Portfolio 2
+<title>Dani Lee arts - arts portfolio, South Wales</title>
+<meta name="description" content="Community arts projecs in Cardiff, Haverfordwest and Talley. Beautiful cob buildings and tile and cob mosaics">
+
+Portfolio 3
+<title>Dani Lee arts - Carmarthenshire based community art</title>
+<meta name="description" content="Community arts projecs in Llandeilo and Swansea. Mosaic map and earth oven">
+
+About
+<title>Dani Lee arts - background information</title>
+<meta name="description" content="Concentrating in South West Wales, Dani Lee arts work with children and adults with a wide range of abilities to create beautiful community mosaics and earth artworks.">

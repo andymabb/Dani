@@ -8,28 +8,52 @@
 
 }
 
-.mainnav a{
+.mainnav li{
+	margin-right:3px;
+}
+.footer-nav li{
+	margin-right:.5em;
+}
+
+.mainnav a, .footer-nav a{
 	color:inherit;
 	font-size: 1.1em;
 	font-size: calc(1.1rem + .2vw);
 	display: inline-block;
-	padding: .5em .5em 0;
+	padding: .5em .5em .5em;
 	text-decoration: none;
+	border-radius: 5px;
 }
 
-.mainnav a:hover{
-	color:var(--highlight);
+.mainnav a:hover,.footer-nav a:hover{
 	text-decoration: underline;
 	
 }
-.mainnav :nth-child(1) a{
-	padding-left: 0;
-}
 
-.mainnav .active a{
-	color:var(--highlight);
+.mainnav .active a,
+.footer-nav .active a
+{
 	text-decoration: none;
 	cursor: default;
+	background: rgba(255,255,255,.1);
+	box-shadow: 3px 3px 8px rgba(0,0,0,.1);
+}
+
+.mainnav a:hover,
+.footer-nav a:hover{
+	box-shadow: none;
+	background: rgba(255,255,255,.06);
+}
+
+.footer-nav li{}
+.footer-nav li:not(.active) a{
+	border:1px solid rgba(255,255,255,.1);
+}
+
+/*=====FOOTER NAV (.footer-nav)=======*/
+
+.footer-nav{
+	display:inline-flex;
 }
 
 /*=====PAGINATION=====*/
@@ -46,16 +70,25 @@
 	padding-left: 0;
 }
 
+.page-links li{
+	margin-right: 2px;
+}
+
 .page-links a{
 	text-decoration: none;
 	padding: .3em .5em;
 	transition:background ease-in-out .1s;
+	border-radius: 4px;
 }
 
 .page-links .active a,
 .page-links :hover,
 .page-links :active
  {
-	background: var(--mygrey);
+	background: var(--primary);
+	color:rgba(2555,255,255,.7);
 }
 
+.page-links .active a{
+	color:#fff;
+}
