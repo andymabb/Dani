@@ -26,6 +26,20 @@ OR
 
 .portfolio-links{
   grid-template-columns: repeat(auto-fill, minmax(var(--threecols), 1fr));
+  grid-gap: 3rem 2rem;
+  margin-bottom: 3em!important;
+}
+
+.portfolio-links a{
+  /* border:2px solid transparent; */
+  box-shadow: 3px 3px 8px rgba(0,0,0,.05),-3px -3px 8px rgba(0,0,0,.1);
+  transition: all .15s ease;
+  text-decoration: none;
+}
+
+.portfolio-links a:hover{
+  /* border:2px solid var(--primary); */
+  box-shadow: 3px 3px 8px rgba(0,0,0,.4),-3px -3px 8px rgba(0,0,0,.2);
 }
 
 .gallery > *{
@@ -89,12 +103,12 @@ img.pull-left{object-position: right;}
 }
 
 .portfolio-links .caption{
-  position:absolute;
-  bottom:0;left:0; right:0; 
+
+  padding-top: .2em;
   text-align: center;
-  color:purple;
-  background: rgba(255,255,255,.8);
+  color:var(--primary);
   z-index: 1;
   padding-bottom: .1em;
   font-variant: small-caps;
+  line-height: 1.1;
 }

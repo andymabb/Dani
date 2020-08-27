@@ -2,21 +2,23 @@ title. max about 50 characters
 desc. max about 120 characters
 
 Home
-<title>Dani Lee arts - Community Arts Projects</title>
-<meta name="description" content="We create participatory art projects with people of all ages and abilities.  We create murals, cob, earth ovens, ancient dwellings and more!">
+<title>Dani Lee arts - Community Arts Mosaic Cob Carmarthenshire Earth Art</title>
+<meta name="description" content="Home - Creative arts activities that develop, sustain and enrich communities. Murals of mosaic or cob, earth ovens and sculpture.">
 
 Portfolio
-<title>Dani Lee arts - community projects</title>
-<meta name="description" content="Community arts projecs in Llandeilo, Ammanford and London. Beautiful cob work and mosaics">
+<title>Dani Lee arts - Portfolio Playground Mosaic Mural Street Art Ammanford</title>
+<meta name="description" content="Portfolio - Creative arts activities that develop, sustain and enrich communities. Murals of mosaic or cob, earth ovens and sculpture.">
 
 Portfolio 2
-<title>Dani Lee arts - arts portfolio, South Wales</title>
-<meta name="description" content="Community arts projecs in Cardiff, Haverfordwest and Talley. Beautiful cob buildings and tile and cob mosaics">
+<title>Dani Lee arts - Portfolio Cob Sculpture Creative Workshops Mental Health </title>
+<meta name="description" content="Portfolio - Creative arts activities that develop, sustain and enrich communities. Murals of mosaic or cob, earth ovens and sculpture.">
 
 Portfolio 3
-<title>Dani Lee arts - Carmarthenshire based community art</title>
-<meta name="description" content="Community arts projecs in Llandeilo and Swansea. Mosaic map and earth oven">
+<title>Dani Lee arts - Portfolio Pizza Oven South West Wales Llandeilo</title>
+<meta name="description" content="Portfolio - Creative arts activities that develop, sustain and enrich communities. Murals of mosaic or cob, earth ovens and sculpture.">
 
 About
-<title>Dani Lee arts - background information</title>
-<meta name="description" content="Concentrating in South West Wales, Dani Lee arts work with children and adults with a wide range of abilities to create beautiful community mosaics and earth artworks.">
+<title>Dani Lee arts - About Community Artwork Art Tuition Carmarthen</title>
+<meta name="description" content="About Us - Creative arts activities that develop, sustain and enrich communities. Murals of mosaic or cob, earth ovens and sculpture.">
+
+

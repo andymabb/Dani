@@ -5,9 +5,13 @@
 :root{
 	--primary: #343b45;
 	--primary: #94266f; 
+	--primary: #8e2a5d; 
 	--secondary: #ffa500;
 	--secondary: #af7a84;
 	--secondary2: #94266f;
+	--btnColour: hsl(320, 45.2%, 42.9%);
+	--btnColour-dark1: hsl(320, 45.2%, 32.9%);
+	--btnColour-dark2: hsl(320, 45.2%, 22.9%);
 	--fourcols: 200px;
 	--threecols:250px;
 }
@@ -35,6 +39,15 @@ body::before{
 	grid-row: 1/3;
 }
 
+h2{
+	font-size: 1.17em;
+}
+
+@media screen {
+	[aria-hidden="true"]{
+	display:none;
+	}
+}
 
 .contact-bar{
 	grid-row: 1;
@@ -49,6 +62,19 @@ body::before{
 .header{
 	grid-row: 2;
 }
+
+.dani-top{
+	grid-row: 1 / 3;
+	grid-column: 3;
+	display:none;
+}
+
+@media screen and (min-width: 1350px){
+	.dani-top{
+		display:block;
+	}
+}
+
 .footer, body::after{
 	grid-row: 4;
 }
@@ -56,11 +82,30 @@ body::before{
 .main{
 	font-size: 1rem;
 	font-size: calc(1rem + .5vw);
-	padding: 1.5em 0 1em;
+	padding: 2em 0 1em;
 }
 
 .footer{
 	z-index: 999;
+	position: relative;
+}
+
+.credit{
+	text-align: right;
+	position: absolute;
+	right:.2em;
+	bottom:.5em;
+}
+
+.credit a{
+	color:CurrentColor;
+	text-decoration: none;
+	opacity: .7;
+}
+
+.credit a:hover{
+	color: #fff;
+	opacity: 1;
 }
 
 .with-side-bar{
@@ -85,7 +130,7 @@ body::before{
 	flex-wrap: wrap;
 }
 
- .contact-bar, .header, .footer{
+ .contact-bar, .header, .hgroup, .footer{
 	background: var(--primary); 
 	color: rgba(255,255,255,.9);
 	padding: 1em 0;
@@ -95,29 +140,47 @@ body::before{
 	padding-top: 0;
 }
 
+.hgroup{
+	text-decoration: none;
+}
+
+.test .hgroup{
+	background: url('../img/dla.png') 0 50% no-repeat;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
 .footer .copy{
 	font-size: 1.1em;
 	margin-top: .6em;
-	/*text-align: center;*/
 }
+
+/* @media screen and (min-width: 900px){
+
+	.footer .copy{
+	text-align: center;
+	}
+
+} */
 
 .footer-links{
 	display:flex;
-	margin-left: -1em;
 }
 
 .contact-bar{
 	padding: 0;
 	justify-content: flex-end;
-	margin-right: -1em;
+	 margin-right: -.5rem; 
 }
 
 .contact-bar a, .footer-links a, .footer-nav a{
 	color:rgba(255, 255, 255, 0.9);
 	font-size: 1.1em;
 	display: inline-block;
-	padding: .4em 1em;
-	white-space: nowrap;
+	padding: .4rem .5rem;
 }
 
 .title{
@@ -172,9 +235,9 @@ img{
 
 .fl, .fr, .full{
 	 margin:0 auto 1rem;
-	 max-width: 100% 
+	 max-width: 100%;
+	 height:auto;
 }
-
 
 
 @media screen and (min-width: 40rem){
@@ -245,7 +308,7 @@ figcaption{
 		font-size:29px;
 	}
 
-	.mainnav a{
+	.mainnav a, .footer-nav a{
 		font-size:20px;
 	}
 
@@ -254,6 +317,12 @@ figcaption{
 	}
 }
 
+
+@media screen and (min-width: 900px){
+
+	.mainnav a, .footer-nav a{
+		font-size:20px;}
+}
 
 /*=====TYPE=====*/
 .lede{
@@ -295,8 +364,25 @@ blockquote cite{
 	border-left: 4px solid var(--secondary);
 	background: hsl(0, 0%, 95%);
 	border-radius: 5px;
-	box-shadow: 3px 3px 8px rgba(0,0,0,.2)
+	box-shadow: 3px 3px 8px rgba(0,0,0,.2);
 }
+
+
+/* Alternative multi-coloured border - remove bl above,
+add the following styles: pos-r, b-r: 0 5px 5px 0;
+then the following:
+
+.dani-quote::before {
+    position: absolute;
+    width: 6px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(30deg, #d367c1 10%, #dedf40 25%, #62cb5c 50%, #00bbcb 75%, #ab79d6 90%);
+    content: "";
+} 
+*/
+
 
 .dani-quote:after {
   content: "\2013 \2003" attr(cite);
@@ -315,10 +401,17 @@ blockquote cite{
 
 .past-work li{
 	padding-left: .3em;
+	padding-bottom: .5em;
 }
 
 .past-work a{
 	color:rgba(0,0,0,.7);
+	transition: background-color 0.5s ease;
+}
+
+.past-work a:hover{
+	color:rgba(0,0,0,.9);
+	background-color: #fdfcc3;
 }
 
 .past-work ::marker{
@@ -356,16 +449,18 @@ blockquote cite{
 .sponsors-partners{
 	display:flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
-	background: rgba(0,0,0,.02);padding: 0 1em;
+	background: rgba(0,0,0,.02);
+	padding: 0 1rem;
 }
 
 .logos{
 	list-style: none;
 	padding-left: 0;
 	display:flex;
-	margin: 0 auto 1em;
-	min-width:100%;
+	flex-flow: wrap;
+	margin: 0 auto;
+	width:100%;
+	justify-content: space-between;
 
 }
 
@@ -373,9 +468,15 @@ blockquote cite{
 	display:flex;
 	align-items: center;
 	margin-right: 1em;
+	margin-bottom: 1em;
 }
 
 /* UTILITIES */
+
+.c{
+	text-align: center;
+}
+
 .bb{
 	border-bottom:1px solid #ccc;
 }
@@ -396,7 +497,6 @@ blockquote cite{
 .click{
 	display: inline-block;
 	margin-bottom: .5em;
-	color: var(--secondary2);
 }
 
 /*button*/
@@ -407,24 +507,34 @@ blockquote cite{
 	margin: 2em 0 2em;
 }
 
-.git a{
-	background-color: #9f3c7e;
-	color:#fff;
-	text-decoration: none;
+a.button{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 10ch;
+  	min-height: 44px;
+  	line-height: 1;
 	padding: .5em 1em;
+	text-decoration: none;
 	border-radius: 5px;
+	background-color: var(--btnColour);
+	color:#fff;
 	box-shadow: 3px 3px 8px rgba(0,0,0,.2);
+	transition: all 75ms ease-in-out;
 }
 
-.git a:hover, .git a:focus{ 
-	transform: translateY(-0.15em);
+.button:hover, .button:active{ 
+	transform: translateY(-0.1em);
+	background-color: var(--btnColour-dark1);
 }
 
-.git a:hover{
+.button:hover{
   box-shadow: 0 0.5em 0.5em -0.4em var(--secondary);
 }
 
-.git a:focus{box-shadow: 3px 3px 8px rgba(0,0,0,.4);}
+.button:focus{box-shadow: 3px 3px 8px rgba(0,0,0,.4);
+	box-shadow: 0 0 0 4px var(--btnColour-dark2);
+}
 
 /* Skip Link */
 #skiptocontent a {
